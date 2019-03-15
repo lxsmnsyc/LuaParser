@@ -26,10 +26,3 @@ local Alternation = require "LuaParser.alternation"
 local Except = require "LuaParser.except"
 
 local Parser = require "LuaParser.parser"
-
-local LowerCase = Range("a", "z")
-local UpperCase = Range("A", "Z")
-local Numeric = Range("0", "9")
-local Alpha = Alternation(LowerCase, UpperCase)
-local AlphaNumeric = Alternation(Alpha, Numeric)
-local Word = Quantifier(AlphaNumeric, 0)
